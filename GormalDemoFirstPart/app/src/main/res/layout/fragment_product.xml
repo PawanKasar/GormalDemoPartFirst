@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragments.ProductFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <EditText
+                android:id="@+id/edt_productName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/curve_corner_white"
+                android:padding="@dimen/_10sdp"
+                android:hint="Product Name"
+                android:inputType="text"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:textColorHint="@color/grey_600"
+                android:textSize="15sp"
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/edt_productDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/curve_corner_white"
+                android:padding="@dimen/_10sdp"
+                android:hint="Product Description"
+                android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
+                android:gravity="top|left"
+                android:lines="8"
+                android:minLines="6"
+                android:maxLines="10"
+                android:maxLength="100"
+                android:scrollHorizontally="true"
+                android:textColorHint="@color/grey_600"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:scrollbars="vertical"/>
+
+            <EditText
+                android:id="@+id/edt_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/curve_corner_white"
+                android:padding="@dimen/_10sdp"
+                android:hint="Quantity"
+                android:inputType="number"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:textColorHint="@color/grey_600"
+                android:textSize="15sp"
+                android:textStyle="normal"/>
+
+            <EditText
+                android:id="@+id/edt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/curve_corner_white"
+                android:padding="@dimen/_10sdp"
+                android:hint="price"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:textColorHint="@color/grey_600"
+                android:textSize="15sp"
+                android:textStyle="normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/curve_corner_purple"
+                android:text="Submit"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
