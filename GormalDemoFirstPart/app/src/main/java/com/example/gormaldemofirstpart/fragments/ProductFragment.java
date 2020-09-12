@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.gormaldemofirstpart.Activities.MainActivity;
 import com.example.gormaldemofirstpart.R;
 import com.example.gormaldemofirstpart.localstorage.DBAadapterClass;
 
@@ -42,6 +43,7 @@ public class ProductFragment extends Fragment implements View.OnClickListener{
     }
 
     private void initViews(View rootView){
+        MainActivity.titleMain.setText("Add New Product");
         edtProductName = rootView.findViewById(R.id.edt_productName);
         edtProductDescription = rootView.findViewById(R.id.edt_productDescription);
         edtQuantity = rootView.findViewById(R.id.edt_quantity);
