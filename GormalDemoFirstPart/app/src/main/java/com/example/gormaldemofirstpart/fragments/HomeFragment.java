@@ -30,6 +30,7 @@ import com.example.gormaldemofirstpart.RetroClient.RetrofitApiUtils;
 import com.example.gormaldemofirstpart.localstorage.DBAadapterClass;
 import com.example.gormaldemofirstpart.models.ProductModel;
 import com.example.gormaldemofirstpart.utilities.CallingImportantMethod;
+import com.example.gormaldemofirstpart.utilities.Connectivity;
 import com.example.gormaldemofirstpart.utilities.Utility;
 
 import org.json.JSONArray;
@@ -142,13 +143,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.btn_sync:
-                if (!jsonArray.isNull(0)){
+                if (!jsonArray.isNull(0) && Connectivity.isConnected(getContext())){
                     pd = new ProgressDialog(getActivity(), R.style.MyTheme);
                     pd.setCancelable(false);
                     pd.setProgressStyle(android.R.style.Widget_ProgressBar_Small);
                     pd.show();
-                    requestServerToAddNewProduct("asd","asdasdasda",
-                            "11","121",substr);
+                    requestServerToAddNewProduct(product_name,product_desc,
+                            product_quantity,product_price,substr);
                 }else {
                     CallingImportantMethod.showToast(getContext(),"Please insert data into LocalDb");
                 }
@@ -156,7 +157,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    public void openProductFragment() {
+    private void openProductFragment() {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.mainContainer, new ProductFragment())
